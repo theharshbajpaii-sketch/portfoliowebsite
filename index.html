@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Harsh Bajpai — AI & Automation Developer based in India. Specializing in full-stack web development, n8n intelligent workflows, and spatial 3D web experiences.">
+  <meta name="keywords" content="Harsh Bajpai, AI Developer, Automation Engineer, n8n Automation, Full Stack Web Development, Three.js, India">
+  <meta name="author" content="Harsh Bajpai">
+  
+  <!-- Open Graph / Social Meta -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Harsh Bajpai | AI & Automation Developer">
+  <meta property="og:description" content="Explore real-world AI concierge tools, n8n automations, and modern spatial web applications built by Harsh Bajpai.">
+  <meta property="og:image" content="assets/avatar-fallback.jpg">
+  
+  <title>Harsh Bajpai — AI & Automation Developer</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons for clean tech badges -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Core Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+  
+  <!-- EmailJS SDK -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+</head>
+<body class="bg-spatial text-light">
+
+  <!-- Three.js 3D Background Canvas -->
+  <canvas id="spatial-canvas" aria-hidden="true"></canvas>
+
+  <!-- Ambient Glow Gradients -->
+  <div class="ambient-glow glow-top-left" aria-hidden="true"></div>
+  <div class="ambient-glow glow-bottom-right" aria-hidden="true"></div>
+  <div class="ambient-glow glow-center" aria-hidden="true"></div>
+
+  <!-- Sticky Spatial Header Navigation -->
+  <header id="site-header" class="site-header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" aria-label="Harsh Bajpai Home">
+        <span class="logo-symbol">&lt;HB/&gt;</span>
+        <span class="logo-text">Harsh<span class="text-accent">.ai</span></span>
+      </a>
+
+      <!-- Desktop Nav -->
+      <nav class="desktop-nav" aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Header CTA & Mobile Toggle -->
+      <div class="header-actions">
+        <a href="https://wa.me/?text=Hi%20Harsh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline-glow hide-on-mobile">
+          <i class="fa-brands fa-whatsapp"></i> Chat Direct
+        </a>
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+          <span class="hamburger-bar"></span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Menu -->
+    <div id="mobile-drawer" class="mobile-drawer" aria-hidden="true">
+      <ul class="mobile-nav-links">
+        <li><a href="#hero" class="mobile-nav-link">Home</a></li>
+        <li><a href="#about" class="mobile-nav-link">About</a></li>
+        <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+        <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+        <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+      </ul>
+      <div class="mobile-drawer-cta">
+        <a href="https://wa.me/?text=Hi%20Harsh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="btn btn-accent w-full">
+          <i class="fa-brands fa-whatsapp"></i> Quick WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    
+    <!-- 1. HERO SECTION -->
+    <section id="hero" class="section hero-section">
+      <div class="container hero-container">
+        
+        <!-- Left: Hero Headline & Value Proposition -->
+        <div class="hero-content">
+          <div class="badge-pill hero-status-badge">
+            <span class="pulse-dot"></span>
+            <span>Available for Real-World AI & Dev Roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            <span class="hero-greeting">Hi, I'm</span>
+            <span class="hero-name gradient-text">Harsh Bajpai</span>
+            <span class="hero-role">AI &amp; Automation Developer</span>
+          </h1>
+
+          <p class="hero-location">
+            <i class="fa-solid fa-location-dot text-cyan"></i>
+            <span>Based in <strong>India</strong></span>
+            <span class="dot-separator">•</span>
+            <span class="text-muted-cyan">Building Intelligent Systems &amp; Spatial Web</span>
+          </p>
+
+          <p class="hero-description">
+            Transforming complex operational bottlenecks into autonomous AI workflows, interactive 3D web applications, and resilient digital architectures.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#projects" class="btn btn-primary-spatial">
+              <span>Explore Projects</span>
+              <i class="fa-solid fa-arrow-down-right"></i>
+            </a>
+            <a href="#contact" class="btn btn-glass-spatial">
+              <span>Get In Touch</span>
+              <i class="fa-solid fa-paper-plane"></i>
+            </a>
+            <a href="https://wa.me/?text=Hi%20Harsh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-spatial" aria-label="Message on WhatsApp">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>WhatsApp</span>
+            </a>
+          </div>
+
+          <!-- Quick Micro Metric Chips -->
+          <div class="hero-metrics">
+            <div class="metric-chip">
+              <span class="metric-num">3+</span>
+              <span class="metric-label">Live Deployments</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-chip">
+              <span class="metric-num">n8n</span>
+              <span class="metric-label">Autonomous AI Logic</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-chip">
+              <span class="metric-num">3D</span>
+              <span class="metric-label">Spatial Three.js</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Welcome Video with Fallback & Sound Pill -->
+        <div class="hero-media-wrapper">
+          <div class="spatial-card video-card-frame" id="hero-media-card">
+            
+            <!-- Video Glow Aura Effect -->
+            <div class="card-glow-layer"></div>
+
+            <div class="media-container" id="media-container">
+              
+              <!-- Welcome Video Element -->
+              <video 
+                id="welcome-video"
+                class="hero-video"
+                autoplay 
+                muted 
+                loop 
+                playsinline 
+                preload="metadata"
+                poster="assets/welcome-poster.jpg"
+                aria-label="Welcome video from Harsh Bajpai"
+              >
+                <!-- Multiple web formats for optimal cross-browser loading -->
+                <source src="assets/welcome-video.webm" type="video/webm">
+                <source src="assets/welcome-video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+
+              <!-- Graceful Static Fallback Image Container -->
+              <div id="video-fallback" class="video-fallback-overlay">
+                <img 
+                  src="assets/avatar-fallback.jpg" 
+                  alt="Harsh Bajpai — AI & Automation Developer" 
+                  class="fallback-portrait"
+                  loading="eager"
+                >
+                <div class="fallback-badge">
+                  <span class="avatar-status-dot"></span>
+                  <span>Harsh Bajpai • AI Dev</span>
+                </div>
+              </div>
+
+              <!-- Unobtrusive Floating Audio Control -->
+              <button id="video-sound-toggle" class="sound-toggle-btn" aria-label="Unmute welcome video" title="Toggle Sound">
+                <span class="sound-icon-wrapper">
+                  <i class="fa-solid fa-volume-xmark" id="sound-icon"></i>
+                </span>
+                <span class="sound-label" id="sound-label">Unmute</span>
+              </button>
+
+              <!-- Live Video Status Indicator Overlay -->
+              <div class="media-status-tag">
+                <span class="live-rec-dot"></span>
+                <span>Spatial Bio</span>
+              </div>
+            </div>
+
+            <div class="media-caption">
+              <div class="caption-text">
+                <span class="caption-title">Harsh Bajpai</span>
+                <span class="caption-subtitle">AI &amp; Automation Developer</span>
+              </div>
+              <div class="tech-stack-mini">
+                <span class="tech-pill">Three.js</span>
+                <span class="tech-pill">n8n</span>
+                <span class="tech-pill">Full-Stack</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 2. ABOUT SECTION -->
+    <section id="about" class="section about-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">ENGINEERING MINDSET</span>
+          <h2 class="section-title">Bridging Full-Stack &amp; AI Automation</h2>
+          <p class="section-subtitle">Real-world practical execution over tutorial complacency.</p>
+        </div>
+
+        <div class="about-grid">
+          
+          <!-- Story / Bio Card -->
+          <div class="spatial-card about-bio-card">
+            <div class="card-glow-layer"></div>
+            <div class="card-inner-content">
+              <div class="bio-header">
+                <div class="bio-icon-box">
+                  <i class="fa-solid fa-code-merge"></i>
+                </div>
+                <div>
+                  <h3 class="bio-heading">Developer Journey &amp; Focus</h3>
+                  <span class="text-muted">Learning Full-Stack • Building Real Projects</span>
+                </div>
+              </div>
+
+              <div class="bio-body">
+                <p>
+                  I am a passionate <strong>AI &amp; Automation Developer</strong> based in India on a deliberate journey into full-stack engineering. Having mastered modern <strong>HTML5</strong> and <strong>CSS3</strong>, I am actively leveling up in <strong>JavaScript</strong> while building production-ready architectures.
+                </p>
+                <p>
+                  Rather than remaining trapped in passive tutorials, I believe in rapid project-based iteration. I build intelligent automation pipelines with <strong>n8n</strong>, integrate conversational LLM agents, and craft spatial web experiences with <strong>Three.js</strong>.
+                </p>
+                <p>
+                  My goal is clear: build robust, scalable applications and automated systems that solve tangible business bottlenecks and deliver measurable value.
+                </p>
+              </div>
+
+              <!-- Philosophy Highlight Highlights -->
+              <div class="philosophy-highlights">
+                <div class="phil-item">
+                  <i class="fa-solid fa-bolt-lightning text-cyan"></i>
+                  <div>
+                    <strong>Action-Driven Development</strong>
+                    <p>Hands-on building from day one with continuous deployment.</p>
+                  </div>
+                </div>
+                <div class="phil-item">
+                  <i class="fa-solid fa-brain text-violet"></i>
+                  <div>
+                    <strong>AI-Assisted Efficiency</strong>
+                    <p>Leveraging cutting-edge tools like Google Antigravity to accelerate delivery.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Quick Stats / Core Pillars -->
+          <div class="about-pillars-stack">
+            
+            <div class="spatial-card pillar-card">
+              <div class="pillar-icon text-cyan">
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Full-Stack Foundations</h4>
+                <p>Clean semantic markup, responsive CSS architectures, modern DOM scripting, and progressive enhancement.</p>
+              </div>
+            </div>
+
+            <div class="spatial-card pillar-card">
+              <div class="pillar-icon text-violet">
+                <i class="fa-solid fa-diagram-project"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>n8n Autonomous Workflows</h4>
+                <p>Designing multi-step webhook automation, CRM data synchronization, and intelligent AI decision trees.</p>
+              </div>
+            </div>
+
+            <div class="spatial-card pillar-card">
+              <div class="pillar-icon text-emerald">
+                <i class="fa-solid fa-cubes"></i>
+              </div>
+              <div class="pillar-content">
+                <h4>Spatial &amp; 3D Web</h4>
+                <p>Creating immersive browser graphics with Three.js, WebGL shader concepts, and high-performance physics-inspired transforms.</p>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 3. SKILLS SECTION -->
+    <section id="skills" class="section skills-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">CAPABILITIES &amp; TOOLKIT</span>
+          <h2 class="section-title">Core Technologies &amp; Workflows</h2>
+          <p class="section-subtitle">A focused stack honed through hands-on system building.</p>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- 1. HTML5 -->
+          <div class="spatial-card skill-card" data-category="frontend">
+            <div class="skill-icon-wrap html-wrap">
+              <i class="fa-brands fa-html5"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">HTML5</h3>
+              <span class="skill-type">Semantic Architecture</span>
+              <p class="skill-desc">Accessible DOM structure, modern SEO markup, and clean layout foundations.</p>
+            </div>
+            <div class="skill-level-badge">Comfortable</div>
+          </div>
+
+          <!-- 2. CSS3 -->
+          <div class="spatial-card skill-card" data-category="frontend">
+            <div class="skill-icon-wrap css-wrap">
+              <i class="fa-brands fa-css3-alt"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">CSS3</h3>
+              <span class="skill-type">Modern Styling &amp; Spatial</span>
+              <p class="skill-desc">Flexbox, Grid, CSS Variables, Glassmorphism, animations, and 360px mobile responsiveness.</p>
+            </div>
+            <div class="skill-level-badge">Comfortable</div>
+          </div>
+
+          <!-- 3. JavaScript -->
+          <div class="spatial-card skill-card" data-category="frontend">
+            <div class="skill-icon-wrap js-wrap">
+              <i class="fa-brands fa-js"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">JavaScript</h3>
+              <span class="skill-type">Interactivity &amp; Logic</span>
+              <p class="skill-desc">DOM manipulation, async/fetch requests, event-driven programming, and modular scripting.</p>
+            </div>
+            <div class="skill-level-badge">Active Focus</div>
+          </div>
+
+          <!-- 4. n8n Automation -->
+          <div class="spatial-card skill-card" data-category="automation">
+            <div class="skill-icon-wrap n8n-wrap">
+              <i class="fa-solid fa-arrows-split-up-and-left"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">n8n Automation</h3>
+              <span class="skill-type">AI Orchestration &amp; Pipelines</span>
+              <p class="skill-desc">Complex webhook pipelines, OpenAI/Claude tool-calling agents, and CRM synchronization.</p>
+            </div>
+            <div class="skill-level-badge">Specialized</div>
+          </div>
+
+          <!-- 5. Excel -->
+          <div class="spatial-card skill-card" data-category="data">
+            <div class="skill-icon-wrap excel-wrap">
+              <i class="fa-solid fa-file-excel"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">Excel &amp; Sheets</h3>
+              <span class="skill-type">Data Structure &amp; Modeling</span>
+              <p class="skill-desc">Data normalization, automated imports/exports, reporting formulas, and CSV pipeline ingestion.</p>
+            </div>
+            <div class="skill-level-badge">Proficient</div>
+          </div>
+
+          <!-- 6. Git & GitHub -->
+          <div class="spatial-card skill-card" data-category="tools">
+            <div class="skill-icon-wrap git-wrap">
+              <i class="fa-brands fa-git-alt"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">Git &amp; GitHub</h3>
+              <span class="skill-type">Version Control &amp; CI</span>
+              <p class="skill-desc">Branching, pull requests, repository hygiene, GitHub Pages, and Render deploy setups.</p>
+            </div>
+            <div class="skill-level-badge">Proficient</div>
+          </div>
+
+          <!-- 7. AI-Assisted Dev (Google Antigravity) -->
+          <div class="spatial-card skill-card skill-card-highlight" data-category="ai">
+            <div class="skill-icon-wrap ai-wrap">
+              <i class="fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="skill-info">
+              <h3 class="skill-name">AI-Assisted Dev</h3>
+              <span class="skill-type">Google Antigravity &amp; LLMs</span>
+              <p class="skill-desc">High-velocity pair programming, agent orchestration, test automation, and rapid prototyping.</p>
+            </div>
+            <div class="skill-level-badge badge-glow">Core Workflow</div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 4. PROJECTS SECTION (3 Interactive 3D Tilt Cards) -->
+    <section id="projects" class="section projects-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">FEATURED WORK</span>
+          <h2 class="section-title">Selected Projects &amp; Live Systems</h2>
+          <p class="section-subtitle">Real-world AI concierges, eCommerce bots, and client-ready web deployments.</p>
+        </div>
+
+        <div class="projects-grid">
+          
+          <!-- PROJECT 1: Pill — AI Clinic Assistant -->
+          <article class="project-tilt-card" data-tilt>
+            <div class="tilt-card-surface">
+              
+              <!-- Dynamic Specular Glare Layer -->
+              <div class="tilt-glare" aria-hidden="true"></div>
+
+              <div class="project-image-container">
+                <img 
+                  src="assets/project-pill.jpg" 
+                  alt="Pill - AI Clinic Assistant Dashboard Interface" 
+                  class="project-thumbnail"
+                  loading="lazy"
+                >
+                <div class="project-overlay-badge">
+                  <span class="badge-status-live"></span>
+                  <span>Live on Render</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <div class="project-meta-tags">
+                  <span class="tag-pill">AI Concierge</span>
+                  <span class="tag-pill">Bilingual EN/HI</span>
+                  <span class="tag-pill">Healthcare</span>
+                </div>
+
+                <h3 class="project-title">Pill — AI Clinic Assistant</h3>
+
+                <p class="project-description">
+                  An intelligent AI concierge system designed for medical clinics. Features real-time appointment booking, bilingual English/Hindi patient interactions, and a secure password-protected administrator dashboard.
+                </p>
+
+                <div class="project-features-list">
+                  <div class="feature-item"><i class="fa-solid fa-check text-cyan"></i> Instant appointment triage</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-cyan"></i> Bilingual conversational flow</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-cyan"></i> Secure admin dashboard</div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://pimedi-bot.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-project-primary">
+                    <span>View Live Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="#contact" class="btn btn-project-secondary">
+                    <span>Inquire System</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 2: Shopify Support Bot -->
+          <article class="project-tilt-card" data-tilt>
+            <div class="tilt-card-surface">
+              
+              <!-- Dynamic Specular Glare Layer -->
+              <div class="tilt-glare" aria-hidden="true"></div>
+
+              <div class="project-image-container">
+                <img 
+                  src="assets/project-shopify.jpg" 
+                  alt="Shopify Support Bot Interface" 
+                  class="project-thumbnail"
+                  loading="lazy"
+                >
+                <div class="project-overlay-badge">
+                  <span class="badge-status-live"></span>
+                  <span>Live on Render</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <div class="project-meta-tags">
+                  <span class="tag-pill">eCommerce AI</span>
+                  <span class="tag-pill">Customer Support</span>
+                  <span class="tag-pill">Shopify</span>
+                </div>
+
+                <h3 class="project-title">Shopify Support Bot</h3>
+
+                <p class="project-description">
+                  An AI-powered customer support bot engineered for Shopify stores. Resolves repetitive buyer inquiries, tracks package delivery statuses, and manages order tickets autonomously with zero agent fatigue.
+                </p>
+
+                <div class="project-features-list">
+                  <div class="feature-item"><i class="fa-solid fa-check text-emerald"></i> Automated order tracking</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-emerald"></i> 24/7 smart buyer resolution</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-emerald"></i> Embeddable store widget</div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="https://shopify-support-bot.onrender.com" target="_blank" rel="noopener noreferrer" class="btn btn-project-primary">
+                    <span>View Live Demo</span>
+                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                  <a href="#contact" class="btn btn-project-secondary">
+                    <span>Inquire System</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+          <!-- PROJECT 3: Gym/Fitness Landing Page -->
+          <article class="project-tilt-card" data-tilt>
+            <div class="tilt-card-surface">
+              
+              <!-- Dynamic Specular Glare Layer -->
+              <div class="tilt-glare" aria-hidden="true"></div>
+
+              <div class="project-image-container">
+                <img 
+                  src="assets/project-gym.jpg" 
+                  alt="Velocity Athletics Gym Landing Page" 
+                  class="project-thumbnail"
+                  loading="lazy"
+                >
+                <div class="project-overlay-badge">
+                  <span class="badge-status-ready"></span>
+                  <span>Client-Ready</span>
+                </div>
+              </div>
+
+              <div class="project-content">
+                <div class="project-meta-tags">
+                  <span class="tag-pill">Client Project</span>
+                  <span class="tag-pill">Fitness / Gym</span>
+                  <span class="tag-pill">Responsive UI</span>
+                </div>
+
+                <h3 class="project-title">Gym / Fitness Landing Page</h3>
+
+                <p class="project-description">
+                  A high-converting, client-ready commercial landing page created for a modern fitness center business. Features dynamic class schedules, trainer rosters, interactive membership tiers, and lead capture.
+                </p>
+
+                <div class="project-features-list">
+                  <div class="feature-item"><i class="fa-solid fa-check text-amber"></i> Dynamic class timetable</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-amber"></i> Tiered membership pricing</div>
+                  <div class="feature-item"><i class="fa-solid fa-check text-amber"></i> Ultra responsive mobile UI</div>
+                </div>
+
+                <div class="project-actions">
+                  <a href="#contact" class="btn btn-project-primary">
+                    <span>Request Demo Preview</span>
+                    <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="https://wa.me/?text=Hi%20Harsh,%20I'm%20interested%20in%20the%20Gym%20Landing%20Page%20design" target="_blank" rel="noopener noreferrer" class="btn btn-project-secondary">
+                    <i class="fa-brands fa-whatsapp"></i> Chat
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 5. CONTACT SECTION -->
+    <section id="contact" class="section contact-section">
+      <div class="container">
+        
+        <div class="section-header text-center">
+          <span class="section-tag">GET IN TOUCH</span>
+          <h2 class="section-title">Let's Build Something Great</h2>
+          <p class="section-subtitle">Open for developer opportunities, automation consultations, and project collaborations.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Contact Info & Quick Direct Links -->
+          <div class="spatial-card contact-info-card">
+            <div class="card-glow-layer"></div>
+            <div class="card-inner-content">
+              
+              <h3 class="contact-info-title">Contact Channels</h3>
+              <p class="contact-info-desc">
+                Have an AI workflow to automate, a web project to build, or a full-time role to discuss? Reach out through any of these direct touchpoints:
+              </p>
+
+              <div class="contact-channels-list">
+                
+                <div class="channel-item">
+                  <div class="channel-icon-wrap text-cyan">
+                    <i class="fa-solid fa-location-dot"></i>
+                  </div>
+                  <div>
+                    <span class="channel-label">Location</span>
+                    <span class="channel-value">India (Available Worldwide)</span>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon-wrap text-violet">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div>
+                    <span class="channel-label">Email</span>
+                    <a href="mailto:harshbajpai.work@gmail.com" class="channel-link">harshbajpai.work@gmail.com</a>
+                  </div>
+                </div>
+
+                <div class="channel-item">
+                  <div class="channel-icon-wrap text-emerald">
+                    <i class="fa-brands fa-whatsapp"></i>
+                  </div>
+                  <div>
+                    <span class="channel-label">WhatsApp</span>
+                    <a href="https://wa.me/?text=Hi%20Harsh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20connect!" target="_blank" rel="noopener noreferrer" class="channel-link">
+                      Direct Instant Message
+                    </a>
+                  </div>
+                </div>
+
+              </div>
+
+              <!-- High Impact WhatsApp CTA Banner -->
+              <div class="whatsapp-cta-banner">
+                <div class="wa-banner-text">
+                  <strong>Need a fast reply?</strong>
+                  <span>Message me directly on WhatsApp</span>
+                </div>
+                <a href="https://wa.me/?text=Hi%20Harsh,%20I%20saw%20your%20portfolio%20and%20would%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp-spatial">
+                  <i class="fa-brands fa-whatsapp"></i> Open WhatsApp
+                </a>
+              </div>
+
+              <!-- Social Profiles -->
+              <div class="social-links-group">
+                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                  <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">
+                  <i class="fa-brands fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="Twitter / X Profile">
+                  <i class="fa-brands fa-x-twitter"></i>
+                </a>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Interactive Contact Form -->
+          <div class="spatial-card contact-form-card">
+            <div class="card-glow-layer"></div>
+            <div class="card-inner-content">
+              
+              <h3 class="form-title">Send a Direct Message</h3>
+              <p class="form-subtitle">Messages are dispatched instantly via EmailJS.</p>
+
+              <form id="portfolio-contact-form" class="spatial-form" novalidate>
+                
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="user_name" class="form-label">Your Name <span class="text-accent">*</span></label>
+                    <div class="input-wrap">
+                      <i class="fa-solid fa-user input-icon"></i>
+                      <input type="text" id="user_name" name="user_name" class="form-input" placeholder="e.g. Alex Sharma" required autocomplete="name">
+                    </div>
+                    <span class="field-error" id="name-error"></span>
+                  </div>
+
+                  <div class="form-group">
+                    <label for="user_email" class="form-label">Email Address <span class="text-accent">*</span></label>
+                    <div class="input-wrap">
+                      <i class="fa-solid fa-envelope input-icon"></i>
+                      <input type="email" id="user_email" name="user_email" class="form-input" placeholder="alex@company.com" required autocomplete="email">
+                    </div>
+                    <span class="field-error" id="email-error"></span>
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="subject" class="form-label">Subject / Purpose</label>
+                  <div class="input-wrap">
+                    <i class="fa-solid fa-tag input-icon"></i>
+                    <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry / Job Opportunity / Collaboration">
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="message" class="form-label">Your Message <span class="text-accent">*</span></label>
+                  <div class="input-wrap textarea-wrap">
+                    <i class="fa-solid fa-message input-icon textarea-icon"></i>
+                    <textarea id="message" name="message" class="form-input form-textarea" rows="4" placeholder="Tell me about your project, timeline, or question..." required></textarea>
+                  </div>
+                  <span class="field-error" id="message-error"></span>
+                </div>
+
+                <button type="submit" id="contact-submit-btn" class="btn btn-submit-spatial">
+                  <span class="btn-text">Send Message</span>
+                  <i class="fa-solid fa-paper-plane btn-icon"></i>
+                  <span class="btn-spinner" aria-hidden="true"></span>
+                </button>
+
+                <!-- Status Feedback Message Box -->
+                <div id="form-status-alert" class="form-alert" role="alert" aria-live="polite" hidden></div>
+
+              </form>
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Toast Alert Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-container">
+      <div class="footer-brand">
+        <a href="#hero" class="brand-logo">
+          <span class="logo-symbol">&lt;HB/&gt;</span>
+          <span class="logo-text">Harsh<span class="text-accent">.ai</span></span>
+        </a>
+        <p class="footer-tagline">Spatial 3D &bull; AI Automation &bull; Modern Web</p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#hero">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-copy">
+        <p>&copy; 2026 Harsh Bajpai. All rights reserved. Crafted with precision in India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <!-- 1. Three.js via CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  
+  <!-- 2. Custom Scripts -->
+  <script src="js/spatial-scene.js"></script>
+  <script src="js/tilt.js"></script>
+  <script src="js/video-player.js"></script>
+  <script src="js/contact.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>
