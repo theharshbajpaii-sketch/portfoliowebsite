@@ -789,6 +789,104 @@
     </div>
   </footer>
 
+  <!-- =========================================================================
+       AI CHAT ASSISTANT WIDGET (Fixed, Session Welcome Intro, Mobile Haptics)
+       ========================================================================= -->
+  <!-- Permanent Compact Trigger Button -->
+  <button 
+    id="ai-chat-trigger" 
+    class="ai-chat-trigger" 
+    type="button" 
+    aria-label="Open Harsh's AI Assistant" 
+    aria-haspopup="dialog" 
+    aria-expanded="false"
+  >
+    <i class="fa-solid fa-wand-magic-sparkles icon-open" aria-hidden="true"></i>
+    <i class="fa-solid fa-xmark icon-close" aria-hidden="true"></i>
+    <span id="ai-chat-badge" class="ai-chat-badge-dot" aria-label="New assistant online"></span>
+  </button>
+
+  <!-- Chat Panel Window -->
+  <aside 
+    id="ai-chat-panel" 
+    class="ai-chat-panel" 
+    role="dialog" 
+    aria-label="Harsh's AI Assistant" 
+    aria-hidden="true"
+  >
+    <!-- Chat Header -->
+    <div class="ai-chat-header">
+      <div class="chat-header-info">
+        <div class="chat-header-avatar" aria-hidden="true">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="chat-header-details">
+          <h4>Harsh's AI Concierge</h4>
+          <div class="chat-header-status">
+            <span class="chat-status-dot"></span>
+            <span>Online &bull; Instant Knowledge</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="chat-header-actions">
+        <button id="ai-chat-minimize-btn" class="chat-ctrl-btn" aria-label="Minimize Chat" type="button">
+          <i class="fa-solid fa-minus"></i>
+        </button>
+        <button id="ai-chat-close-btn" class="chat-ctrl-btn" aria-label="Close Chat" type="button">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- REFINEMENT 2: Session Welcome Typewriter Intro Screen -->
+    <div id="ai-chat-welcome-screen" class="ai-chat-welcome-screen" aria-live="polite">
+      <div class="welcome-avatar-wrap">
+        <div class="welcome-avatar">
+          <i class="fa-solid fa-brain"></i>
+        </div>
+      </div>
+      <div class="welcome-text-container">
+        <span id="ai-chat-welcome-text" class="welcome-typewriter-text"></span>
+      </div>
+      <div class="welcome-subtext">
+        <span class="welcome-spinner"></span>
+        <span>Initializing Harsh's AI Assistant...</span>
+      </div>
+    </div>
+
+    <!-- Main Chat Body -->
+    <div id="ai-chat-body" class="ai-chat-body">
+      <!-- Conversation History -->
+      <div id="ai-chat-messages" class="ai-chat-messages" role="log" aria-live="polite"></div>
+
+      <!-- Quick Suggestion Chips -->
+      <div id="ai-chat-suggestions" class="ai-chat-suggestions" aria-label="Quick Prompts">
+        <button type="button" class="chat-suggestion-chip" data-prompt="Tell me about Pill AI project">💊 Pill AI Project</button>
+        <button type="button" class="chat-suggestion-chip" data-prompt="What is Harsh's tech stack?">⚡ Tech Stack</button>
+        <button type="button" class="chat-suggestion-chip" data-prompt="How can I contact Harsh?">📬 Contact Harsh</button>
+        <button type="button" class="chat-suggestion-chip" data-prompt="Tell me about the 3D spatial experience">🌌 3D WebGL</button>
+      </div>
+
+      <!-- Input Form -->
+      <div class="ai-chat-footer">
+        <form id="ai-chat-form" class="chat-input-form" autocomplete="off">
+          <input 
+            type="text" 
+            id="ai-chat-input" 
+            class="chat-input-field" 
+            placeholder="Ask about projects, skills, or contact..." 
+            aria-label="Your message to AI assistant"
+            required
+          >
+          <button type="submit" id="ai-chat-send-btn" class="chat-send-btn" aria-label="Send Message">
+            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </aside>
+
   <!-- Scripts -->
   <!-- 1. Three.js via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -798,6 +896,7 @@
   <script src="js/tilt.js"></script>
   <script src="js/video-player.js"></script>
   <script src="js/contact.js"></script>
+  <script src="js/chat-widget.js"></script>
   <script src="js/main.js"></script>
 
 </body>
