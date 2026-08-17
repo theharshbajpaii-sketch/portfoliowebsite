@@ -11,7 +11,7 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Harsh Bajpai | AI & Automation Developer">
   <meta property="og:description" content="Explore real-world AI concierge tools, n8n automations, and modern spatial web applications built by Harsh Bajpai.">
-  <meta property="og:image" content="assets/avatar-fallback.jpg">
+  <meta property="og:image" content="assets/harsh-profile-800.jpg">
   
   <title>Harsh Bajpai — AI & Automation Developer</title>
 
@@ -181,12 +181,18 @@
 
               <!-- Graceful Static Fallback Image Container -->
               <div id="video-fallback" class="video-fallback-overlay">
-                <img 
-                  src="assets/avatar-fallback.jpg" 
-                  alt="Harsh Bajpai — AI & Automation Developer" 
-                  class="fallback-portrait"
-                  loading="eager"
-                >
+                <picture>
+                  <source srcset="assets/avatar-fallback.webp 1x, assets/harsh-profile-800.webp 2x" type="image/webp">
+                  <source srcset="assets/avatar-fallback.jpg 1x, assets/harsh-profile-800.jpg 2x" type="image/jpeg">
+                  <img 
+                    src="assets/avatar-fallback.jpg" 
+                    alt="Harsh Bajpai, AI & Automation Developer" 
+                    class="fallback-portrait"
+                    loading="eager"
+                    width="800"
+                    height="800"
+                  >
+                </picture>
                 <div class="fallback-badge">
                   <span class="avatar-status-dot"></span>
                   <span>Harsh Bajpai • AI Dev</span>
@@ -243,10 +249,25 @@
             <div class="card-glow-layer"></div>
             <div class="card-inner-content">
               <div class="bio-header">
-                <div class="bio-icon-box">
-                  <i class="fa-solid fa-code-merge"></i>
+                <div class="about-avatar-wrapper">
+                  <div class="about-avatar-glow" aria-hidden="true"></div>
+                  <picture class="about-avatar-picture">
+                    <source srcset="assets/harsh-profile.webp 1x, assets/harsh-profile-800.webp 2x" type="image/webp">
+                    <source srcset="assets/harsh-profile.jpg 1x, assets/harsh-profile-800.jpg 2x" type="image/jpeg">
+                    <img 
+                      src="assets/harsh-profile.jpg" 
+                      alt="Harsh Bajpai, AI & Automation Developer" 
+                      class="about-avatar-img"
+                      width="400"
+                      height="400"
+                      loading="lazy"
+                    >
+                  </picture>
+                  <div class="about-avatar-status" title="Active & Available">
+                    <span class="avatar-pulse-dot"></span>
+                  </div>
                 </div>
-                <div>
+                <div class="bio-header-text">
                   <h3 class="bio-heading">Developer Journey &amp; Focus</h3>
                   <span class="text-muted">Learning Full-Stack • Building Real Projects</span>
                 </div>
@@ -648,7 +669,7 @@
                   </div>
                   <div>
                     <span class="channel-label">Email</span>
-                    <a href="mailto:harshbajpai.work@gmail.com" class="channel-link">harshbajpai.work@gmail.com</a>
+                    <a href="mailto:theharshbajpaii@gmail.com" class="channel-link">theharshbajpaii@gmail.com</a>
                   </div>
                 </div>
 
@@ -679,7 +700,7 @@
 
               <!-- Social Profiles -->
               <div class="social-links-group">
-                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
+                <a href="https://github.com/theharshbajpaii-sketch" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="GitHub Profile">
                   <i class="fa-brands fa-github"></i>
                 </a>
                 <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-btn" aria-label="LinkedIn Profile">

@@ -42,7 +42,7 @@ Harsh's Technical Toolkit:
 - Backend & Cloud: Node.js, REST APIs, Supabase, EmailJS, Cloudflare, Git/GitHub.
 
 Contact Channels:
-- Email: harshbajpai.work@gmail.com
+- Email: theharshbajpaii@gmail.com
 - WhatsApp: Direct instant messaging
 - Location: India (Available Worldwide for Remote Collaboration)
 
@@ -104,7 +104,7 @@ Guidelines:
     {
       keywords: ['contact', 'email', 'whatsapp', 'hire', 'reach', 'message', 'call', 'freelance', 'job', 'collaborate'],
       response: `You can reach Harsh directly through several channels:<br><br>
-      • 📧 <strong>Email:</strong> <a href="mailto:harshbajpai.work@gmail.com" class="chat-link">harshbajpai.work@gmail.com</a><br>
+      • 📧 <strong>Email:</strong> <a href="mailto:theharshbajpaii@gmail.com" class="chat-link">theharshbajpaii@gmail.com</a><br>
       • 💬 <strong>WhatsApp:</strong> <a href="https://wa.me/?text=Hi%20Harsh,%20I'm%20reaching%20out%20from%20your%20portfolio%20AI%20chat!" target="_blank" rel="noopener noreferrer" class="chat-link">Direct Instant Message</a><br>
       • 📍 <strong>Location:</strong> India (Available Worldwide for Remote Roles)<br><br>
       <div class="chat-btn-group">
@@ -119,7 +119,7 @@ Guidelines:
   ];
 
   const ULTIMATE_FALLBACK_RESPONSE = `I'm currently unable to reach the cloud AI service, but you can connect with Harsh directly!<br><br>
-  • 📧 <strong>Email:</strong> <a href="mailto:harshbajpai.work@gmail.com" class="chat-link">harshbajpai.work@gmail.com</a><br>
+  • 📧 <strong>Email:</strong> <a href="mailto:theharshbajpaii@gmail.com" class="chat-link">theharshbajpaii@gmail.com</a><br>
   • 💬 <strong>WhatsApp:</strong> <a href="https://wa.me/?text=Hi%20Harsh,%20I'm%20reaching%20out%20from%20your%20portfolio%20AI%20chat!" target="_blank" rel="noopener noreferrer" class="chat-link">Instant Chat</a><br><br>
   <div class="chat-btn-group">
     <a href="https://wa.me/?text=Hi%20Harsh,%20I'd%20like%20to%20discuss%20a%20project!" target="_blank" rel="noopener noreferrer" class="chat-action-btn chat-action-wa">
